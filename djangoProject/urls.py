@@ -17,10 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from curriculum.views import verHome, verEstudios
+from curriculum.views import verHome, verEstudios, verExperiencia, verHabilidades, verHobbies, verContacto
 
+# En este archivo se configuran las URLs de la aplicación
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', verHome, name='home'),
-    path('estudios/', verEstudios, name='estudios')
+    path('estudios/', verEstudios, name='estudios'),
+    path('experiencia/', verExperiencia, name='experiencia'),
+    path('habilidades/', verHabilidades, name='habilidades'),
+    path('hobbies/', verHobbies, name='hobbies'),
+    path('contacto/', verContacto, name='contacto'),
 ]
